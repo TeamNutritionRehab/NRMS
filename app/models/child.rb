@@ -1,9 +1,16 @@
 class Child < ActiveRecord::Base
 	#Associations
-
+	has_one :admission, :dependent => :destroy
+	has_one :discharge, :dependent => :destroy
+	has_many :tests, :dependent => :destroy
+	has_one :anthropometry, :dependent => :destroy
+	has_many :feed_plans, :dependent => :destroy
+	has_many :follow_ups, :dependent => :destroy
+	has_one :routine_treatment, :dependent => :destroy
+		
 #/////////////////////////////////////////////////////////////////////
 	#validations
-	validates_uniqueness_of :reg_number
+	validates :reg_number, uniqueness: true
 
 #/////////////////////////////////////////////////////////////////////
 	#Variables with multiple options
