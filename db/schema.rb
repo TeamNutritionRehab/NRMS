@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20161026145238) do
     t.string   "last_name",               limit: 25,                  null: false
     t.string   "guardian_name",           limit: 60,                  null: false
     t.string   "twin_child",              limit: 255, default: "no",  null: false
-    t.integer  "age",                     limit: 3
+    t.date     "dob",                                                 null: false
     t.string   "sex",                     limit: 255,                 null: false
     t.string   "trad_authority",          limit: 255,                 null: false
     t.string   "village",                 limit: 50,                  null: false

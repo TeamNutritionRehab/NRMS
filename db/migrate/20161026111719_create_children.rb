@@ -6,7 +6,7 @@ class CreateChildren < ActiveRecord::Migration
 	    t.string "last_name", :limit => 25, :null => false
 	    t.string "guardian_name", :limit => 60, :null => false
 	    t.string "twin_child", :null => false, :default => "no"
-	    t.integer "age", :limit => 3
+	    t.date "dob", :null => false
 	    t.string "sex", :null => false
 	    t.string "trad_authority", :null => false
 	    t.string "village", :limit => 50, :null => false
